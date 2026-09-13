@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atelier</title>
+    <meta name="description" content="Atelier — AI 影像与创造它们的提示词。点击作品，从原位展开。" />
+    <meta name="theme-color" content="#f5f5f7" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="./" aria-label="Atelier">
+          <span class="brand-mark"><span></span></span>
+          <span class="brand-name">Atelier</span>
+        </a>
+        <label class="search">
+          <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <input id="search" type="search" placeholder="搜索作品或提示词" aria-label="搜索作品或提示词" />
+        </label>
+        <button id="add-btn" class="icon-btn" type="button" aria-label="添加作品">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Prompt Gallery</p>
+        <h1>影像，与创造它们的词语。</h1>
+        <p class="lede">每张图下方都写着生成它的提示词。点图片可放大，点「复制」可带走原文。你的修改会保存在这台设备上。</p>
+      </section>
+
+      <section class="gallery-wrap">
+        <div class="toolbar">
+          <div id="tabs" class="tabs" role="tablist" aria-label="分类"></div>
+          <p id="count" class="count"></p>
+        </div>
+        <div id="grid" class="grid"></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>作品保存在这台设备</span>
+      <button id="restore-btn" type="button">恢复示范作品</button>
+    </footer>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="app.js"></script>
+  </body>
+</html>
